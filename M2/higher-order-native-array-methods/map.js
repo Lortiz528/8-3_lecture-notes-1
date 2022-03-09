@@ -64,7 +64,11 @@ const comics = [
  * Do not use the .map() method just yet. Instead, use an accumulator pattern.
  */
 function getAuthors(comics) {
-  // Write your code here!
+  let arr =[]
+  for(let comic of comics) {
+    arr.push(comic.author)
+  }
+  return arr
 }
 
 const getAuthorsResult = getAuthors(comics);
@@ -77,7 +81,11 @@ console.log(getAuthorsResult); //> [ "Bill Watterson", "Gavin Aung Than", "Olivi
  *
  * Compare what you had written with what you have now. What is a benefit of using the .map() method?
  */
-
+function getAuthors(comics) {
+  comics.map((comic) => {
+    return comic.author
+  })
+}
 /**
  * 3
  *
