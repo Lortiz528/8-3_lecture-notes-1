@@ -10,6 +10,7 @@
  * Take a look at the following code. How many times does the isWebComic() function get called? How could you confirm?
  */
 
+
 const comics = [
   { title: 'Calvin & Hobbes', author: 'Bill Watterson', kind: 'print' },
   { title: 'Zen Pencils', author: 'Gavin Aung Than', kind: 'web' },
@@ -20,6 +21,7 @@ const comics = [
 function isWebComic(comic) {
   return comic.kind === 'web';
 }
+
 
 const result = comics.some(isWebComic);
 console.log(result); //> true
