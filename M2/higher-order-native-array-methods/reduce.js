@@ -146,10 +146,10 @@ let sum3 = arr2.reduce(adder, 5);
  */
 
 function stringConcat(arr) {
-  // your code here
+  return arr.join('')
 }
 
-// console.log(stringConcat([1, 2, 3])); // "123"
+ console.log(stringConcat([1, 2, 3])); // "123"
 /**
  * 5
  *
@@ -159,7 +159,13 @@ function stringConcat(arr) {
  */
 
 function totalVotes(arr) {
-  // your code here
+  let res = 0
+  for (let el of arr) {
+    if (el.voted) {
+      res += 1
+    }
+  }
+  return res
 }
 
 const voters = [
@@ -185,7 +191,11 @@ const voters = [
  */
 
 function shoppingSpree(arr) {
-  // your code here
+  let total = 0
+  for (let el of arr) {
+    total += el.price
+  }
+  return total
 }
 
 const wishlist = [
@@ -222,7 +232,7 @@ const arrays = [['1', '2', '3'], [true], [4, 5, 6]];
  */
 
 function voterResults(arr) {
-  // your code here
+  
 }
 
 // console.log(voterResults(voters)); // Returned value shown below:
