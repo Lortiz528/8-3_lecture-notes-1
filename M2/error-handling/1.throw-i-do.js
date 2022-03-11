@@ -2,7 +2,7 @@
 // it throws an error.
 function markGuestAsAttending(guest) {
   if (!guest.name) {
-    return "Guest must have a name in order to be marked as attending.";
+    throw "Guest must have a name in order to be marked as attending.";
   }
 
   guest.isAttending = true;
