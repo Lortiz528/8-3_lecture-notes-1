@@ -82,10 +82,6 @@ function isWebComic(comic) {
   return comic.kind === 'web';
 }
 
-<<<<<<< HEAD
-
-const result = comics.some(isWebComic);
-=======
 // higher order function similar to the logic of the native array method Array.some()
 const some = (array, callback) => {
   for (let el of array) {
@@ -98,7 +94,6 @@ const some = (array, callback) => {
 };
 
 const result = comics.some(isWebComic); // callback is called for every element that is processed
->>>>>>> 99a87488657b19459f6a7ed5083299d303c5a5e3
 console.log(result); //> true
 console.log(some(comics, isWebComic));
 

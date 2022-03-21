@@ -11,7 +11,7 @@
 const astronauts = ["Jessica Watkins", "Robert Shane", "Nicole Mann"];
 const [astro1, astro2, astro3] = astronauts;
 
-console.log(typeof astro2);
+console.log(typeof astro2); // string
 
 // You can tell we are using destructuring when there is a [] or a {} on the lhs of an =
 
@@ -24,8 +24,8 @@ const astronaut = {
   occupation: "Geologist",
 };
 
-const { occupation } = astronaut;
-console.log(occupation);
+const { name, isActive, occupation } = astronaut;
+console.log(isActive, occupation);
 
 const getName = () => ["myra", "smith"];
 const [firstName, lastName] = getName();
@@ -52,4 +52,4 @@ function getAstronautActivityStatus({ isActive, name }) {
 //   isActive: true,
 //   occupation: "Geologist",
 // };
-getAstronautActivityStatus(astronaut); //> "Jessica Watkins is active."
+console.log(getAstronautActivityStatus(astronaut)); //> "Jessica Watkins is active."

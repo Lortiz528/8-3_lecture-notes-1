@@ -73,8 +73,8 @@ const comics = [
 
 function printAllComics(comics) {
   comics.forEach(function (comic)  {
-    console.log(`${comic.title} by ${comic.author}`);
-  }
+    console.log(`${comic.title} by ${comic.author}`)
+  })
 }
 
 printAllComics(comics);

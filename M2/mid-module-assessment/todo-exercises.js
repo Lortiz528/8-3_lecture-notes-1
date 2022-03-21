@@ -10,7 +10,9 @@ const exampleTodos = require("./todo-data.js");
  * @param {Object[]} todos
  * @returns {Number || Error} - a number between 0 and 100 indicating the percent of tasks that have been completed
  */
-function percentComplete() {}
+function percentComplete(todos) {
+    return
+}
 
 /**
  * isTodoDueOn
@@ -41,7 +43,16 @@ function isTodoDueOn() {}
  *   => ex: allRelatedItemsComplete(exampleTodos, "ehw49g0") // => false
  *   => ex: allRelatedItemsComplete(exampleTodos, "zbacasq") // ERROR
  */
-function allRelatedItemsComplete() {}
+function allRelatedItemsComplete(todos, id) {
+   let todoItem = todos.find((todo) => todo.id === id);
+   if (!todoItem) {
+       throw `Could not find todo item with id: ${id}`;
+   }
+  return todoItem.relatedTo.every((relatedId) => {
+   let relatedToDoItem = todos.find((todo) => todo.id === relatedId);
+   return relatedToDoItem.status.complete;
+   });
+}
 
 /**
  * getStatuses
@@ -65,7 +76,11 @@ function getStatuses() {}
  *
  *   => ex: getIncompleteDescriptions(exampleTodos) // => ["Make dinner", "Clean bedroom", "Sweep floor"]
  */
-function getIncompleteDescriptions() {}
+function getIncompleteDescriptions(todos) {
+    const isIncomplete = (todo) => !todo.status.complete;
+    const getDescription = (todo) => todo.description;
+    return todos.filter(isIncomplete).map(getDescription)
+}
 
 // Now it's your turn! Don't stop here:
 // come up with additional practice problems based on the todo list that will help you practice higher order array methods, error handling, and ES6 syntax

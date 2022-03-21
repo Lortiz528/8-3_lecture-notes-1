@@ -55,9 +55,12 @@ console.log(count);
 // rest operator is helpful to write functions with unknown number of params
 
 const printAll = (...allValues) => {
+  let total=0
   for (let value of allValues) {
-    console.log(value);
+    ;
+    total += value
   }
+  return total
 };
 
-printAll(1, 50);
+console.log(printAll(1, 50, 69));

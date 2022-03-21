@@ -12,6 +12,8 @@ const fullName = {
   last,
 };
 
+console.log(fullName)
+
 // Object short-hand converts the variable assignment operator "=" into the key/val associator operator ":"
 
 /**
